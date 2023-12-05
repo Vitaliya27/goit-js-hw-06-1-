@@ -1,6 +1,10 @@
 const textSize = document.querySelector("#font-size-control");
 const text = document.querySelector("#text");
+const numberLine = textSize.value;
 
-textSize.addEventListener("change", function(event) {
-    text.style.fontSize = this.value + "px";
+text.style.fontSize = `${numberLine}px`;
+
+textSize.addEventListener('input', () => {
+    const number = textSize.value;
+    text.style.fontSize = `${number}px`;
 });
